@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XPike.RequestContext.Http</name>
+    </assembly>
+    <members>
+        <member name="T:XPike.RequestContext.Http.IDependencyCollectionExtensions">
+            <summary>
+            Extension methods to register and configure XPike.DefaultRequestContext.Http.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.IDependencyCollectionExtensions.AddXPikeHttpRequestContext(XPike.IoC.IDependencyCollection)">
+            <summary>
+            Adds dependencies for XPike.DefaultRequestContext.Http to the DI container.
+            You should use one of the extension methods from an implementing library instead, such as from XPike.DefaultRequestContext.Http.AspNetCore.
+            
+            NOTE: If you call this directly, you should also add an appropriate implementation of IRequestContextProvider to a Singleton Collection.
+            </summary>
+            <param name="collection">The IDependencyCollection to add registrations to.</param>
+            <returns>The IDependencyCollection.</returns>
+        </member>
+        <member name="T:XPike.RequestContext.Http.IHttpRequestContextProvider">
+            <inheritdoc cref="T:XPike.RequestContext.IRequestContextProvider" />
+            <summary>
+            A purely decorative/categorical interface to differentiate an HTTP Request
+            Context Provider from other types of IRequestContextProvider.
+            </summary>
+        </member>
+        <member name="T:XPike.RequestContext.Http.Package">
+            <inheritdoc cref="T:XPike.IoC.IDependencyPackage" />
+            <summary>
+            Configures the Dependency Injection container with the necessary
+            registrations for XPike.DefaultRequestContext.Http.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.Package.RegisterPackage(XPike.IoC.IDependencyCollection)">
+            <summary>
+            Registers the XPike.DefaultRequestContext dependencies in the DI container.
+            </summary>
+            <param name="dependencyCollection">The IDependencyCollection to add registrations to.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XPike.RequestContext.Http.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:XPike.RequestContext.Http.WebApi.IDependencyCollectionExtensions">
+            <summary>
+            Extension methods for registering and configuring XPike.RequestContext.Http.WebApi.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.WebApi.IDependencyCollectionExtensions.AddXPikeWebApiRequestContext(XPike.IoC.IDependencyCollection)">
+            <summary>
+            Registers XPike.RequestContext.Http.WebApi with the DI provider.
+            </summary>
+            <param name="collection">The IDependencyCollection to register with.</param>
+            <returns>The IDependencyCollection.</returns>
+        </member>
+        <member name="T:XPike.RequestContext.Http.WebApi.IWebApiRequestContextProvider">
+            <inheritdoc cref="T:XPike.RequestContext.Http.IHttpRequestContextProvider" />
+            <summary>
+            A purely decorative/categorical interface to differentiate an ASP.NET
+            Request Context Provider from other types.
+            </summary>
+        </member>
+        <member name="T:XPike.RequestContext.Http.WebApi.Package">
+            <inheritdoc cref="T:XPike.IoC.IDependencyPackage" />
+            <summary>
+            DI package for XPike.RequestContext.Http.WebApi.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.WebApi.Package.RegisterPackage(XPike.IoC.IDependencyCollection)">
+            <summary>
+            Registers XPike.RequestContext.Http.WebApi with the DI provider.
+            </summary>
+            <param name="dependencyCollection">The IDependencyCollection to register with.</param>
+        </member>
+        <member name="T:XPike.RequestContext.Http.WebApi.WebApiRequestContextProvider">
+            <inheritdoc cref="T:XPike.RequestContext.Http.IHttpRequestContextProvider" />
+            <summary>
+            Provides a RequestContext when called during processing of an ASP.NET request.
+            Uses HttpContext.Current to retrieve the HttpContext instance that is in-scope for the current request.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.WebApi.WebApiRequestContextProvider.#ctor(XPike.Logging.ILog{XPike.RequestContext.Http.WebApi.WebApiRequestContextProvider})">
+            <summary>
+            Creates a new WebApiCoreRequestContextProvider.
+            </summary>
+            <param name="logger">The ILog instance to use for logging.</param>
+        </member>
+        <member name="M:XPike.RequestContext.Http.WebApi.WebApiRequestContextProvider.CreateDictionary(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Helper to convert from a NameValueCollection to a Dictionary.
+            </summary>
+            <param name="nvc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XPike.RequestContext.Http.WebApi.WebApiRequestContextProvider.CreateContext">
+            <inheritdoc />
+            <summary>
+            Creates a new RequestContext when called from within an ASP.NET HTTP Request,
+            or null if no HttpContext can be obtained.
+            </summary>
+            <returns>The RequestContext for the current request, or null.</returns>
+        </member>
+    </members>
+</doc>

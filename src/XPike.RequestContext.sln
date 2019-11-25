@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPike.RequestContext", "XPike.RequestContext\XPike.RequestContext.csproj", "{B404783E-734D-40D0-9E11-DF23E3C7DEB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8E9C0A72-FA99-447B-9B4E-37A3D6CF397C}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+		common.build.props = common.build.props
+		..\xpike-pacakge-icon.png = ..\xpike-pacakge-icon.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{5C5CD27F-15FF-410D-88AA-CA664FA5CD51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcore3", "netcore3", "{2371C604-288F-4FBF-9E7B-41531C084CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Library", "..\examples\Example.Library\Example.Library.csproj", "{16B567E2-F88F-4980-B7E4-A7B3E8708C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPikeRequestContext", "..\examples\netcore3\XPikeRequestContext\XPikeRequestContext.csproj", "{58814A56-20A9-4045-92F7-7D5419D58A35}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{FCBFFBC2-7608-43C6-B31D-7FD8C9BF22F6}"
+	ProjectSection(SolutionItems) = preProject
+		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E7BCBEE6-84E0-4E35-8035-CD948868D4D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{68594A53-8D86-492C-BCD8-7C610693AAB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPike.RequestContext.UnitTests", "..\tests\XPike.RequestContext.UnitTests\XPike.RequestContext.UnitTests.csproj", "{9527BA54-42A9-44DD-B5F9-73FA9931BB2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPike.RequestContext.Http", "XPike.RequestContext.Http\XPike.RequestContext.Http.csproj", "{3F2E82A6-87BE-4A24-B761-5182B460B805}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPike.RequestContext.Http.AspNetCore", "XPike.RequestContext.Http.AspNetCore\XPike.RequestContext.Http.AspNetCore.csproj", "{6594832E-5863-41F2-BF6B-54077AF32AE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPike.RequestContext.Http.WebApi", "XPike.RequestContext.Http.WebApi\XPike.RequestContext.Http.WebApi.csproj", "{14B21395-E949-4A93-A60B-C763A74B43B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B404783E-734D-40D0-9E11-DF23E3C7DEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B404783E-734D-40D0-9E11-DF23E3C7DEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B404783E-734D-40D0-9E11-DF23E3C7DEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B404783E-734D-40D0-9E11-DF23E3C7DEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B567E2-F88F-4980-B7E4-A7B3E8708C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B567E2-F88F-4980-B7E4-A7B3E8708C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B567E2-F88F-4980-B7E4-A7B3E8708C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B567E2-F88F-4980-B7E4-A7B3E8708C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58814A56-20A9-4045-92F7-7D5419D58A35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58814A56-20A9-4045-92F7-7D5419D58A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58814A56-20A9-4045-92F7-7D5419D58A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58814A56-20A9-4045-92F7-7D5419D58A35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9527BA54-42A9-44DD-B5F9-73FA9931BB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9527BA54-42A9-44DD-B5F9-73FA9931BB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9527BA54-42A9-44DD-B5F9-73FA9931BB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9527BA54-42A9-44DD-B5F9-73FA9931BB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F2E82A6-87BE-4A24-B761-5182B460B805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2E82A6-87BE-4A24-B761-5182B460B805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2E82A6-87BE-4A24-B761-5182B460B805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2E82A6-87BE-4A24-B761-5182B460B805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6594832E-5863-41F2-BF6B-54077AF32AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6594832E-5863-41F2-BF6B-54077AF32AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6594832E-5863-41F2-BF6B-54077AF32AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6594832E-5863-41F2-BF6B-54077AF32AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B21395-E949-4A93-A60B-C763A74B43B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B21395-E949-4A93-A60B-C763A74B43B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B21395-E949-4A93-A60B-C763A74B43B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B21395-E949-4A93-A60B-C763A74B43B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B404783E-734D-40D0-9E11-DF23E3C7DEB9} = {E7BCBEE6-84E0-4E35-8035-CD948868D4D4}
+		{2371C604-288F-4FBF-9E7B-41531C084CDD} = {5C5CD27F-15FF-410D-88AA-CA664FA5CD51}
+		{16B567E2-F88F-4980-B7E4-A7B3E8708C67} = {5C5CD27F-15FF-410D-88AA-CA664FA5CD51}
+		{58814A56-20A9-4045-92F7-7D5419D58A35} = {2371C604-288F-4FBF-9E7B-41531C084CDD}
+		{9527BA54-42A9-44DD-B5F9-73FA9931BB2A} = {68594A53-8D86-492C-BCD8-7C610693AAB9}
+		{3F2E82A6-87BE-4A24-B761-5182B460B805} = {E7BCBEE6-84E0-4E35-8035-CD948868D4D4}
+		{6594832E-5863-41F2-BF6B-54077AF32AE1} = {E7BCBEE6-84E0-4E35-8035-CD948868D4D4}
+		{14B21395-E949-4A93-A60B-C763A74B43B3} = {E7BCBEE6-84E0-4E35-8035-CD948868D4D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {340F6AEE-54CB-4691-968C-207F8FB47880}
+	EndGlobalSection
+EndGlobal

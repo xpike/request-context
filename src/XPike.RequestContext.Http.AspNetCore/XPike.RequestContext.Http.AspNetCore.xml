@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XPike.RequestContext.Http.AspNetCore</name>
+    </assembly>
+    <members>
+        <member name="T:XPike.RequestContext.Http.AspNetCore.AspNetCoreRequestContextProvider">
+            <inheritdoc cref="T:XPike.RequestContext.Http.IHttpRequestContextProvider" />
+            <summary>
+            Provides a RequestContext when called during processing of an ASP.NET Core HTTP request.
+            
+            NOTE: This requires that IServiceCollection.AddHttpContextAccessor() has been called.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.AspNetCore.AspNetCoreRequestContextProvider.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,XPike.Logging.ILog{XPike.RequestContext.Http.AspNetCore.AspNetCoreRequestContextProvider})">
+            <summary>
+            Creates a new AspNetCoreRequestContextProvider using the provided IHttpContextAccessor
+            to retrieve the HttpContext instance that is in-scope for the current request.
+            </summary>
+            <param name="contextAccessor">The IHttpContextAccessor to use to retrieve an HttpContext instance.</param>
+            <param name="logger">The ILog instance to use for logging.</param>
+        </member>
+        <member name="M:XPike.RequestContext.Http.AspNetCore.AspNetCoreRequestContextProvider.CreateContext">
+             <inheritdoc />
+             <summary>
+             Returns a RequestContext for the currently running ASP.NET Core HTTP
+             request, or null if no HttpContext could be obtained.
+            
+             Headers and QueryString parameters with more than one value will have
+             those values separated by ";".
+             </summary>
+             <returns>The RequestContext for the current request, or null.</returns>
+        </member>
+        <member name="T:XPike.RequestContext.Http.AspNetCore.IAspNetCoreRequestContextProvider">
+            <inheritdoc cref="T:XPike.RequestContext.IRequestContextProvider" />
+            <summary>
+            A purely decorative/categorical interface to differentiate an
+            ASP.NET Core Request Context Provider from other types.
+            </summary>
+        </member>
+        <member name="T:XPike.RequestContext.Http.AspNetCore.IServiceCollectionExtensions">
+            <summary>
+            Extension methods to register and configure XPike.RequestContext.Http.AspNetCore.
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.AspNetCore.IServiceCollectionExtensions.AddXPikeHttpRequestContext(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers XPike.RequestContext.Http.AspNetCore with the DI provider.
+            
+            NOTE: Also calls IServiceCollection.AddHttpContextAccessor(), which is a dependency.
+            </summary>
+            <param name="services">The IServiceCollection to register with.</param>
+            <returns>The IServiceCollection.</returns>
+        </member>
+        <member name="T:XPike.RequestContext.Http.AspNetCore.Package">
+            <inheritdoc cref="T:XPike.IoC.IDependencyPackage" />
+            <summary>
+            DI registration package for XPike.RequestContext.Http.AspNetCore
+            </summary>
+        </member>
+        <member name="M:XPike.RequestContext.Http.AspNetCore.Package.RegisterPackage(XPike.IoC.IDependencyCollection)">
+            <inheritdoc />
+            <summary>
+            Registers XPike.RequestContext.Http.AspNetCore with the DI provider.
+            </summary>
+            <param name="dependencyCollection">The IDependencyCollection to register with.</param>
+        </member>
+    </members>
+</doc>
