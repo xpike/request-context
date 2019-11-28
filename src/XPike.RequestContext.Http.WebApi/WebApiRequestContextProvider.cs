@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using XPike.Logging;
 
@@ -64,7 +66,11 @@ namespace XPike.RequestContext.Http.WebApi
                         Host = httpContext.Request.Url.Host,
                         Verb = httpContext.Request.HttpMethod,
                         Port = httpContext.Request.Url.Port,
-                        Headers = CreateDictionary(httpContext.Request.Headers)
+                        Headers = CreateDictionary(httpContext.Request.Headers),
+                        Claims = (httpContext.User as ClaimsPrincipal)
+                                 ?.Claims
+                                 ?.ToDictionary(x => x.Type, x => x.Value) ??
+                                 new Dictionary<string, string>()
                     };
             }
             catch (Exception ex)

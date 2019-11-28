@@ -32,5 +32,8 @@ namespace XPike.RequestContext
 
         /// <inheritdoc />
         public virtual IDictionary<string, string> Parameters { get; set; }
+
+        /// <inheritdoc />
+        public IDictionary<string, string> Claims { get; set; }
     }
 }

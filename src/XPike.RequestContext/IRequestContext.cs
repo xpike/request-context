@@ -58,5 +58,11 @@ namespace XPike.RequestContext
         /// If a parameter has multiple values, they should be separated by ";".
         /// </summary>
         IDictionary<string, string> Parameters { get; }
+
+        /// <summary>
+        /// A list of claims for the current request context.
+        /// Presumably sourced from something such as HttpContext.User / JWT.
+        /// </summary>
+        IDictionary<string, string> Claims { get; }
     }
 }

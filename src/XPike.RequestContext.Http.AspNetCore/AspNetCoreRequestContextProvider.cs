@@ -63,9 +63,14 @@ namespace XPike.RequestContext.Http.AspNetCore
                             .GetValueOrDefault(httpContext.Request.Scheme.ToLower() == "https" ? 443 : 80),
                         Address = httpContext.Request.Path,
                         Parameters = httpContext.Request
-                            .Query.ToDictionary(x => x.Key,
+                            .Query
+                            .ToDictionary(x => x.Key,
                                 x => string.Join(";", (IEnumerable<string>) x.Value)),
-                        Verb = httpContext.Request.Method
+                        Verb = httpContext.Request.Method,
+                        Claims = httpContext.User
+                                     ?.Claims
+                                     ?.ToDictionary(x => x.Type, x => x.Value) ??
+                                 new Dictionary<string, string>()
                     };
             }
             catch (Exception ex)
